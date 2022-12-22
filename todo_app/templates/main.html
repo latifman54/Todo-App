@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="title is-large">
+            <p>ToDo.</p>
+            <p class="subtitle">To Seize The Day.</p>
+        </div>
+        <div class="media">
+            <div class="media-center">
+                <img class="image" src="/home/face/PycharmProjects/todo/media/images.png"/>
+            </div>
+        </div>
+        <div class="container">
+            <a class="button is-danger" href="{% url 'login' %}">Log In</a>
+            <a class="button is-link">Sign Up</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

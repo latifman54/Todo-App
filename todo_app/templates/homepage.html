@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="title">Todo List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {% if task.completed %}
+                    <strike>{{ task.title }}</strike>
+                {% else %}
+                    {{ task.title }}
+                {% endif %}
+                <a href="{% url 'todo-complete_task' task.id %}" class="button is-primary is-small">Complete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
